@@ -4,7 +4,7 @@ import ServiceCard from './ServiceCard';
 const Services = () => {
     const [services, setServices] = useState([])
     useEffect(() => {
-        fetch('services.json')  // services.json ai file tyheke data load kortesi 
+        fetch('http://localhost:5000/services')  // services.json ai file tyheke data load kortesi 
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
